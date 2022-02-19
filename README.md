@@ -5,6 +5,8 @@
 
 Chuck Norris Jokes application uses [chucknorris API](https://api.chucknorris.io/) and is implemented to interact with it.
 
+Link to APK file: [add-release.apk](https://github.com/shabalin13/chucknorris_app/blob/master/app-release.apk)
+
 
 ## Features
 
@@ -19,7 +21,7 @@ Chuck Norris Jokes application uses [chucknorris API](https://api.chucknorris.io
 
 ## Screenshots
 
-![Screenshots](https://github.com/shabalin13/chucknorris_app/screenshots/preview.png)
+![Screenshots](https://github.com/shabalin13/chucknorris_app/screenshots/screens.png)
 
 
 ## Contacts
