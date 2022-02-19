@@ -21,7 +21,7 @@ Link to APK file: [add-release.apk](https://github.com/shabalin13/chucknorris_ap
 
 ## Screenshots
 
-![Screenshots](https://github.com/shabalin13/chucknorris_app/screenshots/screens.png)
+![Screenshots](https://github.com/shabalin13/chucknorris_app/blob/master/sreenshots/screens.png)
 
 
 ## Contacts
