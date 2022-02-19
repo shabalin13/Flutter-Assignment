@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:chucknorris_app/http/http_service.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RandomJoke extends StatefulWidget {
   final String? category;
@@ -24,10 +25,6 @@ class _RandomJokeState extends State<RandomJoke> {
 
   String getTitle() {
     return (category == null) ? 'Random Joke' : 'Joke ($category category)';
-  }
-
-  String getCategory() {
-    return (category == null) ? 'random category' : '$category category';
   }
 
   @override
@@ -77,9 +74,22 @@ class _RandomJokeState extends State<RandomJoke> {
                               title: Text(
                                 data[1],
                               ),
-                              subtitle: Text(getCategory()),
                             ),
-                            const Padding(padding: EdgeInsets.only(bottom: 30)),
+                            TextButton.icon(
+                              icon: const Icon(
+                                Icons.link,
+                                color: Colors.black54,
+                              ),
+                              onPressed: () => launchURL(data[2]),
+                              label: Text(
+                                data[2],
+                                style: const TextStyle(
+                                    fontStyle: FontStyle.italic,
+                                    color: Colors.black54,
+                                    fontSize: 11),
+                              ),
+                            ),
+                            const Padding(padding: EdgeInsets.only(bottom: 5)),
                           ],
                         ),
                       ),
@@ -110,4 +120,8 @@ class _RandomJokeState extends State<RandomJoke> {
           ),
         ));
   }
+}
+
+void launchURL(String url) async {
+  if (!await launch(url)) throw 'Could not launch $url';
 }

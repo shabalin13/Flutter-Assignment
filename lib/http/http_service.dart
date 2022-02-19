@@ -8,7 +8,7 @@ class HttpService {
     final response = await http
         .get(Uri.parse('https://api.chucknorris.io/jokes/random/$withCategory'));
     var responseData = json.decode(response.body);
-    return [responseData['icon_url'], responseData['value']];
+    return [responseData['icon_url'], responseData['value'], responseData['url']];
   }
 
   static Future<List<String>> getCategories() async {
@@ -28,7 +28,7 @@ class HttpService {
     var responseData = json.decode(response.body);
     List<List<String>> searchResult = [];
     for (var el in responseData['result']) {
-      searchResult.add([el['icon_url'], el['value']]);
+      searchResult.add([el['icon_url'], el['value'], el['url']]);
     }
     return searchResult;
   }

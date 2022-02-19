@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:chucknorris_app/http/http_service.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Search extends StatefulWidget {
   const Search({Key? key}) : super(key: key);
@@ -71,8 +72,21 @@ class _SearchState extends State<Search> {
                                   data[index][1],
                                 ),
                               ),
-                              const Padding(
-                                  padding: EdgeInsets.only(bottom: 30)),
+                              TextButton.icon(
+                                icon: const Icon(
+                                  Icons.link,
+                                  color: Colors.black54,
+                                ),
+                                onPressed: () => launchURL(data[index][2]),
+                                label: Text(
+                                  data[index][2],
+                                  style: const TextStyle(
+                                      fontStyle: FontStyle.italic,
+                                      color: Colors.black54,
+                                      fontSize: 11),
+                                ),
+                              ),
+                              const Padding(padding: EdgeInsets.only(bottom: 5)),
                             ],
                           ),
                         ),
@@ -143,4 +157,8 @@ class _SearchState extends State<Search> {
       ),
     );
   }
+}
+
+void launchURL(String url) async {
+  if (!await launch(url)) throw 'Could not launch $url';
 }
