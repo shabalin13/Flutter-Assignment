@@ -1,16 +1,31 @@
-# chucknorris_app
+# Chuck Norris Jokes app
 
-A new Flutter project.
 
-## Getting Started
+## About The Project
 
-This project is a starting point for a Flutter application.
+Chuck Norris Jokes application uses [chucknorris API](https://api.chucknorris.io/) and is implemented to interact with it.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Features
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Several screens with content
+* Joke Search
+* Random joke displaying
+* Joke displaying by category 
+* Categories displaying
+* About Dialog with personal info
+* Open jokes in Browser
+
+
+## Screenshots
+
+![Screenshots](https://github.com/shabalin13/chucknorris_app/screenshots/preview.png)
+
+
+## Contacts
+
+Collaborator: Dmitrii Shabalin
+
+Telegram: @shabalin13
+
+Mail: d.shabalin@innopolis.university 
